@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <content>
+  {% if message %}
+    <h3>{{ message }}</h3>
+  {% endif %}
+  <ul>
+{% for room in rooms %}
+    <li>Nazwa sali: {{ room.name }}</li>
+
+{% endfor %}
+</ul>
+    </content>
+
+{% endblock content %}

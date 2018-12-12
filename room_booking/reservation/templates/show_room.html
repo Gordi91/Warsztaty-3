@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <content>
+    Nazwa: {{ room.name }} <br>
+    Pojemność sali: {{ room.capacity }} <br>
+    Rzutnik:
+      {% if room.is_projector_available %}
+          Dostępny
+      {% else %}
+          Niedostępny
+      {% endif %}
+      <br>
+    <a href='{% url 'reservation' room.id %}'>Zarezerwuj salę</a><br>
+    Dni w których sala jest już zarezerwowana: <br>
+    {% for reservation in reservations %}
+        {{ reservation.date }}<br>
+    {% endfor %}
+
+  </content>
+
+{% endblock content %}

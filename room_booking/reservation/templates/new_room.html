@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <content>
+    {% if room %}
+      Sala: {{ room }}
+    {% endif %}
+    <form method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input type="submit" value="Wyślij">
+    </form>
+  </content>
+
+{% endblock content %}

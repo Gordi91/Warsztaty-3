@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+
+  <content>
+    <h1>Welcome to room reservation!</h1>
+    <h2>Wyszukaj wolnej sali</h2>
+    <form method="get" action="{% url 'search_room' %}">
+        <label>Nazwa sali: <br>
+          <input type="text" name="name" placeholder="Wpisz nazwę sali">
+        </label><br>
+        <label>Minimalna pojemność sali: <br>
+          <input type="number" name="capacity" placeholder="Wpisz minimalną pojemność sali">
+        </label><br>
+        <label>Dzień: <br>
+          <input type="date" name="reservation__date" placeholder="Data rezerwacji">
+        </label><br>
+        <label>Dostępność rzutnika:
+          <input type="checkbox" name="is_projector_available">
+        </label><br>
+        <button type="submit">Szukaj</button>
+    </form>
+  </content>
+
+{% endblock content %}

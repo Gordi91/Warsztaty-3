@@ -1,0 +1,98 @@
+{% load static %}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+    background-repeat:no-repeat;
+    background-size:100%;
+}
+
+/* Container for flexboxes */
+section {
+    display: -webkit-flex;
+    display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background: #984B43;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style the content */
+content {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #233237;
+    padding: 10px;
+    color: #fff
+}
+
+/* Style the footer */
+footer {
+    background-color: #18121E;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    section {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+}
+
+/* Change link colors*/
+a:link {
+    color: #ffffff;
+}
+
+a:hover {
+    color: #000000;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+td {
+    min-width:100px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid white ;
+}
+
+
+table {
+    border-collapse: collapse;
+    border: 1px solid white ;
+    margin: 0 auto;
+}
+
+
+input {
+    width: 300px;
+}
